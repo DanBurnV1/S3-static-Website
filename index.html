@@ -1,25 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FeedbackHub — JJTech</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - MJK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
 </head>
 <body>
+<div id="header">
     <div class="container">
-        <h1>💬 FeedbackHub</h1>
-        <p class="subtitle">JJTech — Share ideas, suggestions, and appreciation anonymously!</p>
-
-        <textarea id="feedbackInput" placeholder="Type your feedback..."></textarea>
-        <button id="addBtn">Submit Feedback</button>
-
-        <h2>Recent Feedback</h2>
-        <div id="feedbackList"></div>
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Cloud Engineer</p>
+            <h1>Hi, I'm <span>Mike</span><br>K. from the US</h1>
+        </div>
     </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm a Cloud Engineer with a strong academic foundation in Computer Science and hands-on experience across cloud technologies, software development, data engineering, and DevOps. 
+                   My background includes practical work with AWS and Google Cloud, experience in container orchestration (Kubernetes, Docker Swarm, OpenShift), and contributions to both backend and frontend projects. 
+                   I bring a mix of technical versatility, problem-solving skills, and practical experience in both academic and professional environments.</p>
 
-    <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Cloud & DevOps</span><br>AWS, Google Cloud, Docker, Kubernetes, OpenShift, Linux</li>
+                        <li><span>Programming Languages</span><br>Java, Python, C/C++, SQL, HTML5, CSS3</li>
+                        <li><span>Frameworks & Tools</span><br>React.js, IntelliJ IDEA, Jira, Git, Docker, Affinity Designer</li>
+                        <li><span>Other Skills</span><br>Agile methodologies, System architecture, Databases (MySQL, BigQuery), AI/Transfer learning</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Jan 2025 - Apr 2025</span><br>Software Development - Working Student at IUR.CROWD (ANITA)</li>
+                        <li><span>Oct 2023 - Sept 2024</span><br>Data Engineering - Working Student at Stellenonline.de AG</li>
+                        <li><span>Apr 2023 - Jun 2023</span><br>Software Development - Intern at Stellenonline.de AG</li>
+                        <li><span>Jul 2021 - Aug 2021</span><br>Summer Temp - Vehicle QA Support at Volkswagen AG, Wolfsburg</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Feb 2025</span><br>Bachelor of Science in Computer Science - Brandenburg University of Applied Sciences</li>
+                        <li><span>Dec 2025</span><br>AWS Certified Cloud Practitioner</li>
+                        <li><span>Core Topics</span><br>Cloud Computing, Network Security, System Architecture, Software Engineering, Agile Project Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------services---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-cloud"></i>
+                <h2>Cloud Engineering</h2>
+                <p>Designing and deploying cloud infrastructure on AWS and Google Cloud. Managing data pipelines, automating operations, and implementing security best practices.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-cube"></i>
+                <h2>DevOps & Containerization</h2>
+                <p>Setting up container orchestration platforms (Kubernetes, Docker Swarm, OpenShift). Deployment automation and monitoring scalability of distributed systems.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Software Development</h2>
+                <p>Backend development (Java, Python, SQL) and frontend UI development using React.js. Building full-stack applications with clean, structured code.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-database"></i>
+                <h2>Data Engineering</h2>
+                <p>Managing ETL/ELT workflows and optimizing database performance. Working with cloud data warehouses (BigQuery, MySQL) and automating reporting tasks.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-brain"></i>
+                <h2>AI & Automation</h2>
+                <p>Building automation scripts and AI-assisted scraping tools. Developing probabilistic models and conducting machine learning research projects.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-microchip"></i>
+                <h2>Embedded & IoT</h2>
+                <p>Building robotics and embedded hardware prototypes using Arduino and microcontrollers. Designing hand-gesture control systems and sensor integration.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Music Player App</h3>
+                    <p>Developed a Music Player App using Python (PyGame, TKinter) with intuitive controls and audio playback features.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>CareQR Medical Web App</h3>
+                    <p>Built a responsive Medical Web App using React.js and JavaScript with dynamic components and modern UI/UX design.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Led backend development of an E-Commerce platform with authentication and product catalog logic, built with Java.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>AI Scraping Tool</h3>
+                    <p>Contributed to development of an AI-powered tool for automated structured web data extraction and processing.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Robotic Vehicle - Gesture Control</h3>
+                    <p>Designed and built a hand-gesture-controlled robotic vehicle using Arduino and C with advanced motion control.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Kubernetes & Cloud Orchestration</h3>
+                    <p>Tested and analyzed scalability of Kubernetes, Docker Swarm, OpenShift, and AWS-based orchestration environments.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> mickey_in@outlook.com </p>
+                <p><i class="fas fa-phone-square-alt"></i> +1 (443) 609-7371</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Mike. Made with <i class="fas fa-heart"></i> </p>
+    </div>
+</div>
 
-    <script src="app.js"></script>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = '< add you own link here >' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
